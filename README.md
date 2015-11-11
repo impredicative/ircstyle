@@ -1,7 +1,7 @@
-# IRC-Message-Parser
+# IRC Message Formatter
 [![Build Status](https://travis-ci.org/FujiMakoto/IRC-Message-Formatter.svg?branch=master)](https://travis-ci.org/FujiMakoto/IRC-Message-Formatter)
 
-IRC Message Parser is a simple Python module for applying and stripping formatting from IRC messages. Its primary purpose is for use with Python based IRC bots.
+IRC Message Formatter is a simple Python module for applying and stripping formatting from IRC messages. Its primary purpose is for use with Python based IRC bots.
 
 The modules syntax was heavily inspured by [Click](http://click.pocoo.org/5/utils/#ansi-colors)'s own style and unstyle methods.
 
