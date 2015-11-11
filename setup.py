@@ -1,17 +1,27 @@
 from setuptools import setup, find_packages
 
+
+def readme():
+    with open('README.rst') as f:
+        return f.read()
+
+
 setup(
-    name='IRC Message Parser',
+    name='IRC Message Formatter',
     version='0.1.0',
-    description='IRC Message Parser',
-    long_description='IRC Message Parser',
+    description='A simple Python module for applying and stripping formatting from IRC messages.',
+    long_description=readme(),
     author='Makoto Fujimoto',
     author_email='makoto@makoto.io',
-    url='https://github.com/FujiMakoto/IRC-Message-Parser',
+    url='https://github.com/FujiMakoto/IRC-Message-Formatter',
     license='MIT',
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
+
+        'Intended Audience :: Developers',
+        'Topic :: Communications :: Chat :: Internet Relay Chat',
+        'Topic :: Text Processing'
     ],
     packages=find_packages(),
     entry_points={},
