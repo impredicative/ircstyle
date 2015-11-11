@@ -15,5 +15,5 @@ setup(
     ],
     packages=find_packages(),
     entry_points={},
-    install_requires=['six']
+    install_requires=['six>=1.10.0,<1.11']
 )
