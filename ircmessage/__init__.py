@@ -1,6 +1,6 @@
 import re
 from six import string_types
-import colors
+from ircmessage import colors
 
 # IRC Contextual controls
 NORMAL      = "\x01"
@@ -24,6 +24,10 @@ def _color_code(color):
     Returns:
         str: Formatted IRC color code with a leading zero
     """
+    # Default to black if no color is provided
+    if color is None:
+        color = 'black'
+
     if isinstance(color, string_types):
         try:
             color = getattr(colors, color)
@@ -81,7 +85,7 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
     bits = []
 
     # Apply foreground / background colors
-    if fg or bg:
+    if (fg is not None) or (bg is not None):
         fg = _color_code(fg)
 
         # Foreground and background or foreground only?
@@ -111,7 +115,7 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
         bits.append(ITALICS)
 
     if underline:
-        bits.append(underline)
+        bits.append(UNDERLINE)
 
     bits.append(text)
 
