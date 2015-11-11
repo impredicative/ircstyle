@@ -28,6 +28,4 @@ setup(
     install_requires=['six>=1.10.0,<1.11'],
 
     keywords=['irc'],
-
-    py_modules=['typewriter']
 )
