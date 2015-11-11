@@ -3,12 +3,12 @@
 
 IRC Message Formatter is a simple Python module for applying and stripping formatting from IRC messages. Its primary purpose is for use with Python based IRC bots.
 
-The modules syntax was heavily inspured by [Click](http://click.pocoo.org/5/utils/#ansi-colors)'s own style and unstyle methods.
+The modules syntax was heavily inspired by [Click](http://click.pocoo.org/5/utils/#ansi-colors)'s own style and unstyle methods.
 
 ## Installation
 You can install the IRC Message Formatter module via pip,
 
-```pip install ircmessage```
+```pip install irc-message```
 
 This module provides two primary methods, **style** and **unstyle**
 

@@ -7,7 +7,7 @@ def readme():
 
 
 setup(
-    name='IRC Message Formatter',
+    name='irc-message',
     version='0.1.0',
     description='A simple Python module for applying and stripping formatting from IRC messages.',
     long_description=readme(),
