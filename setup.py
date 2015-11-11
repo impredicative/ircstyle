@@ -15,5 +15,5 @@ setup(
     ],
     packages=find_packages(),
     entry_points={},
-    install_requires=['click', 'six']
+    install_requires=['six']
 )

@@ -1,4 +1,3 @@
-import click
 import re
 from six import string_types
 import colors
