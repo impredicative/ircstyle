@@ -1,11 +1,11 @@
-IRC Message Formatter
-=====================
+IRC Message
+===========
 
 |Build Status|
 
-IRC Message Formatter is a simple Python module for applying and
-stripping formatting from IRC messages. Its primary purpose is for use
-with Python based IRC bots.
+IRC Message is a simple Python module for applying and stripping
+formatting from IRC messages. Its primary purpose is for use with Python
+based IRC bots.
 
 The modules syntax was heavily inspired by
 `Click <http://click.pocoo.org/5/utils/#ansi-colors>`__'s own style and
