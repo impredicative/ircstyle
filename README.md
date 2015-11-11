@@ -8,7 +8,7 @@ The modules syntax was heavily inspired by [Click](http://click.pocoo.org/5/util
 ## Installation
 You can install the IRC Message Formatter module via pip,
 
-```pip install irc-message```
+```pip install ircmessage```
 
 This module provides two primary methods, **style** and **unstyle**
 

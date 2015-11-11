@@ -16,7 +16,7 @@ Installation
 
 You can install the IRC Message Formatter module via pip,
 
-``pip install irc-message``
+``pip install ircmessage``
 
 This module provides two primary methods, **style** and **unstyle**
 
