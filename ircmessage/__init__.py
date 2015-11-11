@@ -1,4 +1,5 @@
 import click
+import re
 from six import string_types
 import colors
 
@@ -119,3 +120,22 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
         bits.append(NORMAL)
 
     return ''.join(bits)
+
+
+def unstyle(text):
+    """
+    Removes color / attribute codes from an IRC message.
+
+    Args:
+        text (str): The text to remove style information from.
+
+    Returns:
+        str: The raw (unformatted) message.
+    """
+    # Strip attribute codes first
+    for code in (NORMAL, BOLD, ITALICS, UNDERLINE):
+        text = text.replace(code, '')
+
+    text = re.sub('\x03(?P<fg>\d{2})(,(?P<bg>\d{2}))?', '', text)
+
+    return text
