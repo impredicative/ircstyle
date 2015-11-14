@@ -1,7 +1,7 @@
 IRC Message
 ===========
 
-|Build Status|
+|Build Status| |Coverage Status| |Codacy Badge|
 
 IRC Message is a simple Python module for applying and stripping
 formatting from IRC messages. Its primary purpose is for use with Python
@@ -82,5 +82,9 @@ License
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
     THE SOFTWARE.
 
-.. |Build Status| image:: https://travis-ci.org/FujiMakoto/IRC-Message-Formatter.svg?branch=master
-   :target: https://travis-ci.org/FujiMakoto/IRC-Message-Formatter
+.. |Build Status| image:: https://travis-ci.org/FujiMakoto/IRC-Message.svg?branch=master
+   :target: https://travis-ci.org/FujiMakoto/IRC-Message
+.. |Coverage Status| image:: https://coveralls.io/repos/FujiMakoto/IRC-Message/badge.svg?branch=master&service=github
+   :target: https://coveralls.io/github/FujiMakoto/IRC-Message?branch=master
+.. |Codacy Badge| image:: https://api.codacy.com/project/badge/grade/8f58d6b6195f4a0f82d2e1c8fc6a209b
+   :target: https://www.codacy.com/app/makoto_2/IRC-Message
