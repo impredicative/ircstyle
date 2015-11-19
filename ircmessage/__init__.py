@@ -3,7 +3,7 @@ from six import string_types
 from ircmessage import colors
 
 # IRC Contextual controls
-NORMAL      = "\x01"
+NORMAL      = "\x0F"
 BOLD        = "\x02"
 ITALICS     = "\x1D"
 UNDERLINE   = "\x1F"
