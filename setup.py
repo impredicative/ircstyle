@@ -8,7 +8,7 @@ def readme():
 
 setup(
     name='ircmessage',
-    version='0.1.0',
+    version='0.1.1',
     description='A simple Python module for applying and stripping formatting from IRC messages.',
     long_description=readme(),
     author='Makoto Fujimoto',
@@ -27,5 +27,5 @@ setup(
     entry_points={},
     install_requires=['six>=1.10.0,<1.11'],
 
-    keywords=['irc'],
+    keywords=['irc', 'internet relay chat'],
 )

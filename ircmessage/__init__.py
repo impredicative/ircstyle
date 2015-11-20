@@ -2,6 +2,13 @@ import re
 from six import string_types
 from ircmessage import colors
 
+__author__     = "Makoto Fujimoto"
+__copyright__  = 'Copyright 2015, Makoto Fujimoto'
+__license__    = "MIT"
+__version__    = "0.1.1"
+__maintainer__ = "Makoto Fujimoto"
+
+
 # IRC Contextual controls
 NORMAL      = "\x0F"
 BOLD        = "\x02"
