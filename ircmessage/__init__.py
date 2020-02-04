@@ -1,5 +1,4 @@
 import re
-from six import string_types
 from ircmessage import colors
 
 __author__     = "Makoto Fujimoto"
@@ -35,7 +34,7 @@ def _color_code(color):
     if color is None:
         color = 'black'
 
-    if isinstance(color, string_types):
+    if isinstance(color, str):
         try:
             color = getattr(colors, color)
         except AttributeError:

@@ -25,7 +25,5 @@ setup(
     ],
     packages=find_packages(exclude=['tests']),
     entry_points={},
-    install_requires=['six>=1.10.0,<1.11'],
-
     keywords=['irc', 'internet relay chat'],
 )
