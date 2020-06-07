@@ -1,8 +1,9 @@
-from .config import IrcMessageTestCase
+import unittest
+
 import ircmessage
 
 
-class AttributeTests(IrcMessageTestCase):
+class AttributeTests(unittest.TestCase):
     """
     Basic attribute code tests
     """
@@ -39,7 +40,7 @@ class AttributeTests(IrcMessageTestCase):
         self.assertEqual(message, '\x02\x1d\x1fHello, world!')
 
 
-class ColorTests(IrcMessageTestCase):
+class ColorTests(unittest.TestCase):
     """
     Color code tests
     """
@@ -203,7 +204,7 @@ class ColorTests(IrcMessageTestCase):
         self.assertRaises(TypeError, ircmessage.style, 'Hello, world!', 'bad_color')
 
 
-class UnstyleTests(IrcMessageTestCase):
+class UnstyleTests(unittest.TestCase):
 
     def test_unstyle_complex(self):
         message = '\x0308,02\x02\x1fHello, world!\x0F'
