@@ -18,6 +18,7 @@ setup(
     license="MIT",
     classifiers=[
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
         "License :: OSI Approved :: MIT License",
         "Intended Audience :: Developers",
         "Topic :: Communications :: Chat :: Internet Relay Chat",
