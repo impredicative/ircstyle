@@ -1,29 +1,30 @@
-from setuptools import setup, find_packages
+"""Package installation setup."""
+from pathlib import Path
 
+from setuptools import find_packages, setup
 
-def readme():
-    with open('README.rst') as f:
-        return f.read()
+_DIR = Path(__file__).parent
 
 
 setup(
-    name='ircmessage',
-    version='0.1.1',
-    description='A simple Python module for applying and stripping formatting from IRC messages.',
-    long_description=readme(),
-    author='Makoto Fujimoto',
-    author_email='makoto@makoto.io',
-    url='https://github.com/FujiMakoto/IRC-Message-Formatter',
-    license='MIT',
+    name="ircstyle",
+    version="0.1.0",
+    description="Apply and strip formatting on IRC messages",
+    long_description=(_DIR / "README.md").read_text().strip(),
+    long_description_content_type="text/markdown",
+    author="Ouroboros Chrysopoeia",
+    author_email="impredicative@users.nomail.github.com",
+    url="https://github.com/impredicative/ircstyle",
+    license="MIT",
     classifiers=[
-        'Development Status :: 3 - Alpha',
-        'License :: OSI Approved :: MIT License',
-
-        'Intended Audience :: Developers',
-        'Topic :: Communications :: Chat :: Internet Relay Chat',
-        'Topic :: Text Processing'
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: MIT License",
+        "Intended Audience :: Developers",
+        "Topic :: Communications :: Chat :: Internet Relay Chat",
+        "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Text Processing",
     ],
-    packages=find_packages(exclude=['tests']),
-    entry_points={},
-    keywords=['irc', 'internet relay chat'],
+    packages=find_packages(exclude=["scripts", "tests"]),
+    python_requires=">=3.7",
+    keywords=["irc"],
 )

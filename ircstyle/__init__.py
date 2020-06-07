@@ -1,19 +1,13 @@
 import re
-from ircmessage import colors
 
-__author__     = "Makoto Fujimoto"
-__copyright__  = 'Copyright 2015, Makoto Fujimoto'
-__license__    = "MIT"
-__version__    = "0.1.1"
-__maintainer__ = "Makoto Fujimoto"
-
+from . import colors
 
 # IRC Contextual controls
-NORMAL      = "\x0F"
-BOLD        = "\x02"
-ITALICS     = "\x1D"
-UNDERLINE   = "\x1F"
-COLOR       = "\x03"
+NORMAL = "\x0F"
+BOLD = "\x02"
+ITALICS = "\x1D"
+UNDERLINE = "\x1F"
+COLOR = "\x03"
 
 
 def _color_code(color):
@@ -22,7 +16,7 @@ def _color_code(color):
 
     Args:
         color (str or int): Input can either be a string (the name of the color, e.g. red), or an int pulled
-        from a color constant (e.g. ircmessage.colors.red)
+        from a color constant (e.g. ircstyle.colors.red)
 
     Raises:
         TypeError: Raised if the supplied color does not exist
@@ -32,13 +26,13 @@ def _color_code(color):
     """
     # Default to black if no color is provided
     if color is None:
-        color = 'black'
+        color = "black"
 
     if isinstance(color, str):
         try:
             color = getattr(colors, color)
         except AttributeError:
-            raise TypeError('Unknown color: {c}'.format(c=color))
+            raise TypeError("Unknown color: {c}".format(c=color))
 
     return str(color).zfill(2)
 
@@ -50,9 +44,9 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
     a reset ("normal") code is issued. This can be prevented by passing ``reset=False``.
 
     Examples:
-        ircmessage.style('Hello World!', fg='green')
-        ircmessage.style('ATTENTION!', bold=True, underline=True)
-        ircmessage.style('Some things', bg=ircmessage.colors.teal)
+        ircstyle.style('Hello World!', fg='green')
+        ircstyle.style('ATTENTION!', bold=True, underline=True)
+        ircstyle.style('Some things', bg=ircstyle.colors.teal)
 
     Supported color names:
 
@@ -76,9 +70,9 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
     Args:
         text (str): The string to style with attribute / color codes
         fg (Optional[str, int or None]): The foreground color. This should be either the name of the color or the
-            color code referenced from a constant in ircmessage.colors. Defaults to None.
+            color code referenced from a constant in ircstyle.colors. Defaults to None.
         bg (Optional[str, int or None]): The background color. This should be either the name of the color or the
-            color code referenced from a constant in ircmessage.colors. Defaults to None.
+            color code referenced from a constant in ircstyle.colors. Defaults to None.
         bold (Optional[bool]): Enable bold formatting. Defaults to False.
         italics (Optional[bool]): Enable italic formatting. Defaults to False.
         underline (Optional[bool]): Enable underline formatting. Defaults to False.
@@ -99,18 +93,11 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
             bg = _color_code(bg)
 
             color_template = "{color_ctrl}{fg_code},{bg_code}"
-            color_code = color_template.format(
-                color_ctrl=COLOR,
-                fg_code=fg,
-                bg_code=bg
-            )
+            color_code = color_template.format(color_ctrl=COLOR, fg_code=fg, bg_code=bg)
             bits.append(color_code)
         else:
             color_template = "{color_ctrl}{fg_code}"
-            color_code = color_template.format(
-                color_ctrl=COLOR,
-                fg_code=fg
-            )
+            color_code = color_template.format(color_ctrl=COLOR, fg_code=fg)
             bits.append(color_code)
 
     # Apply contextual formatting
@@ -128,7 +115,7 @@ def style(text, fg=None, bg=None, bold=False, italics=False, underline=False, re
     if reset:
         bits.append(NORMAL)
 
-    return ''.join(bits)
+    return "".join(bits)
 
 
 def unstyle(text):
@@ -143,8 +130,8 @@ def unstyle(text):
     """
     # Strip attribute codes first
     for code in (NORMAL, BOLD, ITALICS, UNDERLINE):
-        text = text.replace(code, '')
+        text = text.replace(code, "")
 
-    text = re.sub('\x03(?P<fg>\d{2})(,(?P<bg>\d{2}))?', '', text)
+    text = re.sub(r"\x03(?P<fg>\d{2})(,(?P<bg>\d{2}))?", "", text)
 
     return text

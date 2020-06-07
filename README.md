@@ -1,5 +1,6 @@
 # ircstyle
-**ircstyle** is a Python package for applying and stripping formatting from IRC messages. Its primary purpose is for use with Python based IRC bots.
+**ircstyle** is a Python 3.7+ package for applying and stripping formatting from IRC messages. 
+Its primary purpose is for use with Python based IRC bots.
 
 ## Links
 * Code: https://github.com/impredicative/ircstyle/
@@ -10,24 +11,24 @@
 This package provides two primary methods, **style** and **unstyle**
 
 ### Style
-```python
-ircmessage.style(text, fg=None, bg=None, bold=False, italics=False, underline=False, reset=True):
-```
 This method is used to style text with IRC attribute and / or color codes.
+```python
+ircstyle.style(text, fg=None, bg=None, bold=False, italics=False, underline=False, reset=True)
+```
 
 Examples:
 ```python
-ircmessage.style('Hello World!', fg='green')
+ircstyle.style('Hello World!', fg='green')
 ```
 ```python
-ircmessage.style('ATTENTION!', bold=True, underline=True)
+ircstyle.style('ATTENTION!', bold=True, underline=True)
 ```
 ```python
-ircmessage.style('Some things', bg=ircmessage.colors.teal)
+ircstyle.style('Some things', bg=ircstyle.colors.teal)
 ```
 
 ### Unstyle
 ```python
-ircmessage.unstyle(text)
+ircstyle.unstyle(text)
 ```
 This method is used to strip all formatting control codes from IRC messages so that you can safely display and log the contents outside of IRC in a printable format.
