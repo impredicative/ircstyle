@@ -8,7 +8,7 @@ _DIR = Path(__file__).parent
 
 setup(
     name="ircstyle",
-    version="0.1.0",
+    version="0.1.1",
     description="Apply and strip formatting from IRC messages",
     long_description=(_DIR / "README.md").read_text().strip(),
     long_description_content_type="text/markdown",
