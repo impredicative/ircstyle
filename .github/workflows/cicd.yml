@@ -21,7 +21,7 @@ jobs:
       run: |
         python -V
         python -m pip install --upgrade pip
-        pip install -U -r ./requirements/dev.in
+        pip install -U -r ./dev.in
         ./scripts/test.sh
   cd:
     runs-on: ubuntu-latest
