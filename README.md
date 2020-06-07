@@ -1,18 +1,13 @@
-# IRC Style
-[![Build Status](https://travis-ci.org/FujiMakoto/IRC-Message.svg?branch=master)](https://travis-ci.org/FujiMakoto/IRC-Message)
-[![Coverage Status](https://coveralls.io/repos/FujiMakoto/IRC-Message/badge.svg?branch=master&service=github)](https://coveralls.io/github/FujiMakoto/IRC-Message?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/grade/8f58d6b6195f4a0f82d2e1c8fc6a209b)](https://www.codacy.com/app/makoto_2/IRC-Message)
+# ircstyle
+**ircstyle** is a Python package for applying and stripping formatting from IRC messages. Its primary purpose is for use with Python based IRC bots.
 
-IRC Message is a simple Python module for applying and stripping formatting from IRC messages. Its primary purpose is for use with Python based IRC bots.
+## Links
+* Code: https://github.com/impredicative/ircstyle/
+* Release: https://pypi.org/project/ircstyle/
+* Changelog: https://github.com/impredicative/ircstyle/releases
 
-The modules syntax was heavily inspired by [Click](http://click.pocoo.org/5/utils/#ansi-colors)'s own style and unstyle methods.
-
-## Installation
-You can install the IRC Message Formatter module via pip,
-
-```pip install ircstyle```
-
-This module provides two primary methods, **style** and **unstyle**
+## Usage
+This package provides two primary methods, **style** and **unstyle**
 
 ### Style
 ```python
