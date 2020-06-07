@@ -3,7 +3,7 @@ black
 isort
 mypy
 pip
-pip-tools
+# pip-tools
 pycodestyle
 pydocstyle
 pylint
