@@ -8,11 +8,13 @@ Its primary purpose is for use with Python based IRC bots.
 * Changelog: https://github.com/impredicative/ircstyle/releases
 
 ## Usage
-This package provides two primary methods, **style** and **unstyle**
+This package provides two primary methods, **style** and **unstyle**.
 
 ### Style
 This method is used to style text with IRC attribute and / or color codes.
 ```python
+import ircstyle
+
 ircstyle.style(text, fg=None, bg=None, bold=False, italics=False, underline=False, reset=True)
 ```
 
@@ -28,7 +30,9 @@ ircstyle.style('Some things', bg=ircstyle.colors.teal)
 ```
 
 ### Unstyle
+This method is used to strip all formatting control codes from IRC messages so that you can safely display and log the contents outside of IRC in a printable format.
 ```python
+import ircstyle
+
 ircstyle.unstyle(text)
 ```
-This method is used to strip all formatting control codes from IRC messages so that you can safely display and log the contents outside of IRC in a printable format.
