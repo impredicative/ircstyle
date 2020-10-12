@@ -2,6 +2,8 @@
 **ircstyle** is a Python 3.7+ package for applying and stripping formatting from IRC messages. 
 Its primary purpose is for use with Python based IRC bots.
 
+[![cicd badge](https://github.com/impredicative/ircstyle/workflows/cicd/badge.svg?branch=master)](https://github.com/impredicative/ircstyle/actions?query=workflow%3Acicd+branch%3Amaster)
+
 ## Links
 * Code: https://github.com/impredicative/ircstyle/
 * Release: https://pypi.org/project/ircstyle/
