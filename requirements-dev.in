@@ -2,8 +2,6 @@ autopep8
 black
 isort
 mypy
-pip
-# pip-tools
 pycodestyle
 pydocstyle
 pylint
@@ -15,4 +13,3 @@ pytest-pycodestyle
 pytest-pydocstyle
 pytest-pylint
 vulture
-wheel
