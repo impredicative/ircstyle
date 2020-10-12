@@ -27,4 +27,5 @@ setup: install test
 test:
 	black --check .
 	vulture --make-whitelist . ./vulture.txt
+	@rm -rf ./.coverage*
 	pytest
